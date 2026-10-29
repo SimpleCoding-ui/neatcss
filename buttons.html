@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>neat css - buttons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/neat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script type="text/javascript" src="/js/neat.js"></script>
+  </head>
+  <body>
+    <div class="nt">
+      <header>
+        <a href="index.html"><h1>Neat CSS</h1></a>
+        <p>The tidy css framework, with a small bit of javascript. </p>
+        <div class="nt-menu-h">
+          <div class="nt-menu-button" >
+            <i id="menu-button-h" class="fa-solid fa-bars" onclick="toggleHorizontalMenu(this)"></i>
+          </div>
+          <div id="main-menu-h" class="nt-menu-content">
+            <a href="structure.html" class="nt-menu-item">Structure</a>
+            <a href="buttons.html" class="nt-menu-item">Buttons</a>
+            <a href="tables.html" class="nt-menu-item">Tables</a>
+            <a href="forms.html" class="nt-menu-item">Forms</a>
+            <a href="menus.html" class="nt-menu-item">Menus</a>
+          </div>
+        </div>
+      </header>
+      <main>
+          <h1>Buttons</h1>
+          <p>Neat.css comes with a very small set of semantic buttons. There are fives predefined classes:</p>
+          <ul>
+            <li><code>.nt-button</code></li>
+            <li><code>.nt-button-info</code></li>
+            <li><code>.nt-button-success</code></li>
+            <li><code>.nt-button-warning</code></li>
+            <li><code>.nt-button-error</code></li>
+          </ul>
+          <p>You can combine neat and other tools such as Font Awesome icons.</p>
+          <div class="nt-row">
+            <button class="nt-button" style="margin:2px;"><i class="fa-solid fa-square-check"></i>Basic button</button>
+            <button class="nt-button-info" style="margin:2px;"><i class="fa-solid fa-square-check"></i>Info button</button>
+            <button class="nt-button-success" style="margin:2px;"><i class="fa-solid fa-square-check"></i>Success button</button>        
+            <button class="nt-button-warning" style="margin:2px;"><i class="fa-solid fa-square-check"></i>Warning button</button>
+            <button class="nt-button-error" style="margin:2px;"><i class="fa-solid fa-square-check"></i>Error button</button>
+          </div>
+          <h2>Basic button</h2>
+          Use the <code>.nt-button</code> classname for a basic button, using background color.
+          <pre>
+            &lt;button class="nt-button" style="margin:2px;"&gt;Basic button&lt;/button&gt;
+            &lt;button class="nt-button" style="margin:2px;"&gt;
+              &lt;i class="fa-solid fa-square-check"&gt;&lt;/i&gt;Basic button with icon
+            &lt;/button&gt;
+          </pre>
+          <div class="nt-row">
+            <button class="nt-button" style="margin:2px;">Basic button</button>
+            <button class="nt-button" style="margin:2px;"><i class="fa-solid fa-square-check"></i>Basic button with icon</button>
+          </div>
+          <h2>Information button</h2>
+          Use the <code>.nt-button-info</code> classname. This button can be used for positive actions, such as validating a form.
+          <div class="nt-row">
+            <button class="nt-button-info" style="margin:2px;"></i>Info button</button>
+            <button class="nt-button-info" style="margin:2px;"><i class="fa-solid fa-square-check"></i>Info button with icon</button>
+          </div>
+          <h2>Success button</h2>
+          Use the <code>.nt-button-success</code> classname. This button can be used for agreement validation.
+          <div class="nt-row">
+            <button class="nt-button-success" style="margin:2px;"></i>Success button</button>
+            <button class="nt-button-success" style="margin:2px;"><i class="fa-solid fa-square-check"></i>Success button with icon</button>
+          </div>
+          <h2>Warning button</h2>
+          Use the <code>.nt-button-warning</code> classname.
+          <div class="nt-row">
+            <button class="nt-button-warning" style="margin:2px;"></i>Warning button</button>
+            <button class="nt-button-warning" style="margin:2px;"><i class="fa-solid fa-square-check"></i>Warning button with icon</button>
+          </div>
+          <h2>Error button</h2>
+          Use the <code>.nt-button-error</code> classname. This button can be used for agreement validation.
+          <div class="nt-row">
+            <button class="nt-button-error" style="margin:2px;"></i>Error button</button>
+            <button class="nt-button-error" style="margin:2px;"><i class="fa-solid fa-square-check"></i>Error button with icon</button>
+          </div>
+      <br>
+      <h2>Combination</h2>
+      You can combine forms and buttons for meaningful actions.
+      <h3>Basic form validation</h3>
+      <div class="nt-row">
+        <form class="nt-form">
+                <fieldset>
+                    <legend>A very compact inline form</legend>
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <button type="submit" class="nt-button">Sign in</button>
+                </fieldset>
+            </form>
+      </div>
+      <h3>Action Confirmation</h3>
+      <div class="nt-row">
+        <form action="" class="nt-form nt-form-piled">
+              <fieldset>
+                <legend>Confirmation</legend>
+                <label for="">Do you really want to delete this element?</label>
+                <div class="nt-form-group">
+                  <div class="nt-button-success"><i class="fa-solid fa-square-check"></i>Proceed</div>
+                  <div class="nt-button-error"><i class="fa-solid fa-square-xmark"></i>Cancel</div>
+                </div>
+                </div>
+              </fieldset>
+            </form>
+      </div>
+      </main>
+      <hr>
+      <footer>
+         <a href="https://github.com/AsNeatAsPossible/neatcss">Project page</a>
+      </footer>
+    </div>  
+  </body>
+</html>

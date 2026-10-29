@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Dropdowns</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/neat.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet" />
+  <script type="text/javascript" src="../js/neat.js"></script>
+</head>
+
+<body>
+  <div class="nt">
+    <header>
+      <a href=""><h4>Dropdown menu (demo)</h4></a>
+      <div class="nt-menu-h">
+        <div class="nt-menu-button" >
+          <i id="menu-button-h" class="fa-solid fa-bars" onclick="toggleHorizontalMenu(this)"></i>
+        </div>
+        <div id="main-menu-h" class="nt-menu-content">
+          <a href="" class="nt-menu-item">Link 1</a>
+          <div class="nt-dropdown">
+            <div href="" class="nt-menu-item nt-dropdown-button" onclick="toggleDropdown(this)">
+            Link 2<i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="nt-dropdown-content">
+                <a href="" class="nt-menu-item">Link 2-1</a>
+                <a href="" class="nt-menu-item">Link 2-2</a>
+                <a href="" class="nt-menu-item">Link 2-3</a>
+            </div>
+          </div>
+          <a href="" class="nt-menu-item">Link 3</a>
+        </div>
+      </div>      
+    </header>
+    Page content here.  
+  </div>
+</body>
+</html>

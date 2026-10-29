@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>neat css - structure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/neat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script type="text/javascript" src="/js/neat.js"></script>
+  </head>
+  <body>
+    <div class="nt">
+      <header>
+      <a href="index.html"><h1>Neat CSS</h1></a>
+      <p>The tidy css framework, with a small bit of javascript. </p>
+      <div class="nt-menu-h">
+          <div class="nt-menu-button" >
+            <i id="menu-button-h" class="fa-solid fa-bars" onclick="toggleHorizontalMenu(this)"></i>
+          </div>
+          <div id="main-menu-h" class="nt-menu-content">
+            <a href="structure.html" class="nt-menu-item">Structure</a>
+            <a href="buttons.html" class="nt-menu-item">Buttons</a>
+            <a href="tables.html" class="nt-menu-item">Tables</a>
+            <a href="forms.html" class="nt-menu-item">Forms</a>
+            <a href="menus.html" class="nt-menu-item">Menus</a>
+          </div>
+        </div>
+    </header>
+      <main>
+      <h1>Basic structure hierarchy</h1>
+      Neat is based on a 3 levels hierarchical structure: container, row and column.
+      <h2>Containers</h2>
+      A container is a basic box wrapping the content in a certain way. 
+      It is meant to be used as the child of the <code>body</code> element. Use the <code>.nt</code> classname to create a container. A container's width depends on the screen size. The default width is 100% of its parent's width, decreasing to 60% for large screens. Resize your viewport to see how <code>.nt</code> containers work.
+      <br>
+      <br>
+      <div class="nt" style="border:solid 1px dimgrey">This is a <code>.nt</code> container</div>
+      <br>
+      If you need a 100% width, whatever the screen size is, use the <code>.nt-full</code> classname.
+      <br>
+      <br>
+      <div class="nt-full" style="border:solid 1px dimgrey">This is a <code>.nt-full</code> container</div>
+      <h2>Grids</h2>
+      <p>Neat is "responsive first" and works with a grid system, just like most of the css frameworks. It comes with two grid systems:</p>
+      <ul>
+        <li>a system based on one 5th of the width of the container</li>
+        <li>a system based on one 12th of the width of the container</li>
+      </ul>
+      <p>In order to work properly, the page must be structured using <code>.nt-row</code> classes, embedding <code>.nt-col-</code> classes.</p>
+      <h3>5ths based columns</h3>
+      <pre>
+        &lt;div class=&quot;nt-row&quot;&gt;
+          &lt;div class=&quot;nt-col-5-5 nt-col-md-2-5&quot; style=&quot;border:solid 1px white&quot;&gt;
+            &lt;p&gt;Resize your viewport to see mobile version&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;nt-col-5-5 nt-col-md-1-5&quot; style=&quot;border:solid 1px white&quot;&gt;
+            &lt;p&gt;Resize your viewport to see mobile version&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;nt-col-5-5 nt-col-md-2-5&quot; style=&quot;border:solid 1px white&quot;&gt;
+            &lt;p&gt;Resize your viewport to see mobile version&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </pre>
+      <div class="nt-row">
+        <div class="nt-col-5-5 nt-col-md-2-5" style="border:solid 1px white">
+          <p>1 - Resize your viewport to see mobile version</p>
+        </div>
+        <div class="nt-col-5-5 nt-col-md-1-5" style="border:solid 1px white">
+          <p>2 - Resize your viewport to see mobile version - 1/5</p>
+        </div>
+        <div class="nt-col-5-5 nt-col-md-2-5" style="border:solid 1px white">
+          <p>3 - Resize your viewport to see mobile version - 2/5</p>
+        </div>
+      </div>
+      <div class="nt-row">
+        <img src="img/grid.png" alt="" class="nt-img">
+      </div>
+      <h3>12ths based columns</h3>
+      <pre>
+        &lt;div class=&quot;nt-row&quot;&gt;
+          &lt;div class=&quot;nt-col-6-12 nt-col-md-4-12&quot; style=&quot;border:solid 1px white&quot;&gt;
+            &lt;p&gt;Resize your viewport to see mobile version&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;nt-col-6-12 nt-col-md-4-12&quot; style=&quot;border:solid 1px white&quot;&gt;
+            &lt;p&gt;Resize your viewport to see mobile version&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;nt-col-6-12 nt-col-md-4-12&quot; style=&quot;border:solid 1px white&quot;&gt;
+            &lt;p&gt;Resize your viewport to see mobile version&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </pre>
+      <div class="nt-row">
+        <div class="nt-col-6-12 nt-col-md-4-12" style="border:solid 1px white">
+          <p>Resize your viewport to see mobile version</p>
+        </div>
+        <div class="nt-col-6-12 nt-col-md-4-12" style="border:solid 1px white">
+          <p>Resize your viewport to see mobile version</p>
+        </div>
+        <div class="nt-col-6-12 nt-col-md-4-12" style="border:solid 1px white">
+          <p>Resize your viewport to see mobile version</p>
+        </div>
+      </div>
+      <h2>Breakpoints</h2>
+      <table class="nt-table nt-table-bordered">
+        <thead>
+          <tr>
+            <th>Screen width</th>
+            <th>Prefix</th>
+            <th>Media query</th>
+            <th>Class name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Default</td>
+            <td>none</td>
+            <td>none</td>
+            <td>nt-col-...</td>
+          </tr>
+          <tr>
+            <td>35.5 em</td>
+            <td>sd</td>
+            <td>@media screen and (min-width: 35.5em)</td>
+            <td>nt-col-sd-...</td>
+          </tr>
+          <tr>
+            <td>48 em</td>
+            <td>md</td>
+            <td>@media screen and (min-width: 48em)</td>
+            <td>nt-col-md-...</td>
+          </tr>
+          <tr>
+            <td>64 em</td>
+            <td>lg</td>
+            <td>@media screen and (min-width: 64em)</td>
+            <td>nt-col-lg-...</td>
+          </tr>
+          <tr>
+            <td>80 em</td>
+            <td>xl</td>
+            <td>@media screen and (min-width: 80em)</td>
+            <td>nt-col-xl-...</td>
+          </tr>
+          <tr>
+            <td>120 em</td>
+            <td>xxl</td>
+            <td>@media screen and (min-width: 120em)</td>
+            <td>nt-col-xxl-...</td>
+          </tr>
+        </tbody>
+      </table>
+      </main>
+      <footer>
+         <a href="https://github.com/AsNeatAsPossible/neatcss">Project page</a>
+      </footer>
+    </div>  
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>neat css - forms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/neat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script type="text/javascript" src="/js/neat.js"></script>
+  </head>
+  <body>
+    <div class="nt">
+      <header>
+        <a href="index.html"><h1>Neat CSS</h1></a>
+        <p>The tidy css framework, with a small bit of javascript. </p>
+        <div class="nt-menu-h">
+          <div class="nt-menu-button" >
+            <i id="menu-button-h" class="fa-solid fa-bars" onclick="toggleHorizontalMenu(this)"></i>
+          </div>
+          <div id="main-menu-h" class="nt-menu-content">
+            <a href="structure.html" class="nt-menu-item">Structure</a>
+            <a href="buttons.html" class="nt-menu-item">Buttons</a>
+            <a href="tables.html" class="nt-menu-item">Tables</a>
+            <a href="forms.html" class="nt-menu-item">Forms</a>
+            <a href="menus.html" class="nt-menu-item">Menus</a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <h1>Forms</h1>
+        <h2>Simple forms</h2>
+        The <code>.nt-form</code> class provides a basic formatting for the form element.
+        <pre>
+          &lt;div class="nt-row"&gt;
+            &lt;form class="nt-form"&gt;
+                &lt;fieldset&gt;
+                    &lt;legend&gt;A very compact inline form&lt;/legend&gt;
+                    &lt;input type="email" placeholder="Email" /&gt;
+                    &lt;input type="password" placeholder="Password" /&gt;
+                    &lt;button type="submit" class="nt-button"&gt;Sign in&lt;/button&gt;
+                &lt;/fieldset&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+        </pre>
+        <div class="nt-row">
+            <form class="nt-form">
+                <fieldset>
+                    <legend>A very compact inline form</legend>
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <button type="submit" class="nt-button">Sign in</button>
+                </fieldset>
+            </form>
+          </div>
+          <br>
+          <h2>Piled forms</h2>
+          Add the <code>.nt-form-piled</code> class to the <code>.nt-form</code> class to get a piled form.
+          <pre>
+            &lt;div class="nt-row"&gt;
+            &lt;form class="nt-form nt-form-piled"&gt;
+              &lt;fieldset&gt;
+                &lt;legend&gt;Piled form&lt;/legend&gt;
+                &lt;label for=""&gt;Label 1&lt;/label&gt;
+                &lt;input type="text" placeholder="input1"&gt;
+                &lt;label for=""&gt;Label 2&lt;/label&gt;
+                &lt;div class="nt-form-group"&gt;
+                  &lt;input type="radio" name="radiobtn" id="1st_choice"&gt;&lt;label for="1st_choice"&gt;1st choice&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="nt-form-group"&gt;
+                &lt;input type="radio" name="radiobtn" id="2nd_choice"&gt;&lt;label for="2nd_choice"&gt;2nd choice&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;button type="submit" class="nt-button"&gt;OK&lt;/button&gt;
+              &lt;/fieldset&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+          </pre>
+          <div class="nt-row">
+            <form class="nt-form nt-form-piled">
+              <fieldset>
+                <legend>Piled form</legend>
+                <label for="">Label 1</label>
+                <input type="text" placeholder="input1">
+                <label for="">Label 2</label>
+                <div class="nt-form-group">
+                  <input type="radio" name="radiobtn" id="1st_choice"><label for="1st_choice">1st choice</label>
+                </div>
+                <div class="nt-form-group">
+                <input type="radio" name="radiobtn" id="2nd_choice"><label for="2nd_choice">2nd choice</label>
+                </div>
+                <button type="submit" class="nt-button">OK</button>
+              </fieldset>
+            </form>
+          </div>
+          For a more pleasant look, add the <code>.nt-button-full</code> to get a full width button.
+          <pre>
+            &lt;div class="nt-row"&gt;
+            &lt;form class="nt-form nt-form-piled"&gt;
+              &lt;fieldset&gt;
+                &lt;legend&gt;Piled form&lt;/legend&gt;
+                &lt;label for=""&gt;Label 1&lt;/label&gt;
+                &lt;input type="text" placeholder="input1"&gt;
+                &lt;label for=""&gt;Label 2&lt;/label&gt;
+                &lt;div class="nt-form-group"&gt;
+                  &lt;input type="radio" name="radiobtn" id="1st_choice"&gt;&lt;label for="1st_choice"&gt;1st choice&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="nt-form-group"&gt;
+                &lt;input type="radio" name="radiobtn" id="2nd_choice"&gt;&lt;label for="2nd_choice"&gt;2nd choice&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;button type="submit" class="nt-button-info nt-button-full"&gt;OK&lt;/button&gt;
+              &lt;/fieldset&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+          </pre>
+          <div class="nt-row">
+            <form class="nt-form nt-form-piled">
+              <fieldset>
+                <legend>Piled form</legend>
+                <label for="">Label 1</label>
+                <input type="text" placeholder="input1">
+                <label for="">Label 2</label>
+                <div class="nt-form-group">
+                  <input type="radio" name="radiobtn" id="1st_choice"><label for="1st_choice">1st choice</label>
+                </div>
+                <div class="nt-form-group">
+                <input type="radio" name="radiobtn" id="2nd_choice"><label for="2nd_choice">2nd choice</label>
+                </div>
+                <button type="submit" class="nt-button-info nt-button-full">OK</button>
+              </fieldset>
+            </form>
+          </div>
+          <br>
+          <h2>Aligned forms</h2>
+          You can play around with grids inside forms to create aligned forms.
+          <div class="nt-row">
+            <form class="nt-form">
+              <fieldset>
+                <legend>Aligned form, using the grid system</legend>
+                <label class="nt-col-4-12">label 1</label><input class="nt-col-4-12" type="text"><div class="nt-col-4-12">message</div>
+                <label class="nt-col-4-12">label 2</label><input class="nt-col-4-12" type="text"><div class="nt-col-4-12">message</div>
+                <label class="nt-col-4-12">label 2</label><div class="nt-col-4-12">
+                <div class="nt-form-group">
+                  <input type="radio" name="radiobtn" id="1st_choice"><label for="1st_choice">1st choice</label>
+                </div>
+                <div class="nt-form-group">
+                <input type="radio" name="radiobtn" id="2nd_choice"><label for="2nd_choice">2nd choice</label>
+                </div>
+                </div><div class="nt-col-4-12">message</div>
+                <button type="submit" class="nt-button-info nt-button-full">ACCEPT</button>
+              </fieldset>
+            </form>
+          </div>
+          <div class="nt-row">
+            <form class="nt-form">
+               <fieldset>
+                <legend>Another aligned form</legend>
+                <label for="" class="nt-col-2-5">Label 1</label><input class="nt-col-2-5" type="text"><button class="nt-button-success nt-col-1-5">SAVE</button>
+                <label for="" class="nt-col-2-5">Label 2</label><input class="nt-col-2-5" type="text"><button class="nt-button-success nt-col-1-5">SAVE</button>
+               </fieldset>
+            </form>
+          </div>
+      </main>
+      <hr>
+      <footer>
+         <a href="https://github.com/AsNeatAsPossible/neatcss">Project page</a>
+      </footer>
+    </div>  
+  </body>
+</html>
