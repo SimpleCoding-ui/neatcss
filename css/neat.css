@@ -363,11 +363,13 @@ details{
     /*border: solid 1px var(--letters);*/
     border-radius: 5px;
     margin-top: 2px;
+    padding: 5px;
 }
 summary{
     background-color: var(--letters);
     color: var(--background);
     padding: 5px;
+    border-radius: 5px;
 }
 details.nt-menu-item{
     width: auto;
